@@ -1,0 +1,79 @@
+#CardsArea{
+  width: 100%;
+}
+
+.cards-wrap-area{
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+
+.filter{
+  background-color: white;
+
+  border: solid 5px var(--mh_gray);
+  border-radius: 20px;
+
+  font-size: 12pt;
+  font-weight: 800;
+  color: var(--mh_gray);
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.filter.textfield{
+  width: 30%;
+  margin-left: 35%;
+}
+
+.filter.textfield > img{
+  width: 25px;
+  height: 25px;
+
+  margin-top: 10px;
+  margin-left: 10px;
+
+  object-fit: cover;
+  float: left;
+
+
+  filter: invert(48%) sepia(13%);
+}
+
+.filter.textfield > input{
+  width: calc(100% - 70px);
+  height: 100%;
+
+  margin-left: 10px;
+  background-color: transparent;
+
+  font-size: 14pt;
+  font-weight: 800;
+  color: var(--mh_gray);
+
+  margin: 10px;
+
+  outline: none !important;
+  border: none;
+}
+
+@media (max-width: 800px)
+{
+  .filter.textfield{
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .filter.textfield > img{
+    margin: 5px;
+    margin-left: 10px;
+  }
+
+  .filter.textfield > input{
+    width: calc(100% - 60px);
+    margin: 5px;
+  }
+
+}

@@ -1,0 +1,43 @@
+#Navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2%;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+}
+
+.logo{
+  display: block;
+  width: 150px;
+  cursor: pointer;
+}
+
+.dropDownIcon{
+  display: block;
+
+  cursor: pointer;
+  width: 40px;
+
+  -webkit-filter: invert(90%); /* Safari/Chrome */
+  filter: invert(90%);
+
+  transition: all 0.2s;
+}
+
+
+.dropDownIcon{
+  width: 45px;
+
+  -webkit-filter: invert(100%); /* Safari/Chrome */
+  filter: invert(100%);
+}
+
+
+@media (max-width: 800px)
+{
+  #Navbar{
+    justify-content: center;
+  }
+}

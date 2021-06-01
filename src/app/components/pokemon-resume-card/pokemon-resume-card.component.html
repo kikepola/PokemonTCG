@@ -1,0 +1,15 @@
+<div id="PokemonResumeCard" [routerLink]="['/pokemon', pokemon.id]" >
+  <img class="fill-img" src={{pokemon.images.small}} alt='image'>
+  <div class="pokemon-small-info">
+    <div class="pokemon-small-info-title">
+      <h2>{{pokemon.name}}</h2>
+      <p><b>ID: </b>{{pokemon.id}}</p>
+    </div>
+    <div class="types-area">
+      <h3>Tipos</h3>
+      <ul>
+        <li *ngFor="let type of pokemon.types">{{type}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

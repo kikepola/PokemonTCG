@@ -1,0 +1,14 @@
+<div id="CardsArea">
+  <app-loading [hidden]="!isLoading"></app-loading>
+
+  <div class="filter textfield">
+    <img src="../../../assets/search.png"/>
+    <input type="text" (keyup)="filterBy($event)"/>
+  </div>
+
+  <div class="cards-wrap-area">
+    <app-pokemon-resume-card *ngFor='let pokemon of filteredPokemons'
+      [pokemon]="pokemon"
+    ></app-pokemon-resume-card>
+  </div>
+</div>
