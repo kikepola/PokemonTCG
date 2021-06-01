@@ -1,7 +1,7 @@
 .lds-ring {
   position: absolute;
-  top: calc(50% - 100px);
-  left: calc(50% - 100px);
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
 
   display: inline-block;
   width: 100px;

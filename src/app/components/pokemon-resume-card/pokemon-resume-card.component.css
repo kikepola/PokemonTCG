@@ -45,6 +45,10 @@
 .types-area{
   background-color: rgb(66, 65, 65);
   border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+
+  padding-top: 5%;
+  padding-left: 5%;
 }
 
 @media (max-width: 600px)
