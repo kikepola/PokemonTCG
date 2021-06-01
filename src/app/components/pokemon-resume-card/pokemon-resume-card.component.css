@@ -43,7 +43,7 @@
 }
 
 .types-area{
-  background-color: rgb(102, 102, 102);
+  background-color: rgb(66, 65, 65);
   border-bottom-right-radius: 30px;
 }
 
@@ -57,5 +57,13 @@
 
   .fill-img{
     width: 100%;
+  }
+
+  .pokemon-small-info p, h3, ul{
+    margin-left: 5%;
+  }
+
+  .pokemon-small-info h3, b{
+    color: rgba(255, 255, 255, 0.8);
   }
 }

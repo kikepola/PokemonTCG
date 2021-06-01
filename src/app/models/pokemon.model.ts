@@ -6,6 +6,11 @@ export interface Pokedex {
   totalCount: number;
 }
 
+export interface SinglePokedex {
+  data: Pokemon;
+}
+
+
 export interface Pokemon {
   id: string;
   name: string;
@@ -26,6 +31,12 @@ export interface Pokemon {
   legalities: Legalities2;
   images: Images2;
   tcgplayer: Tcgplayer;
+  resistances: Resistance[];
+}
+
+export interface Resistance {
+  type: string;
+  value: string;
 }
 
 export interface Attack {

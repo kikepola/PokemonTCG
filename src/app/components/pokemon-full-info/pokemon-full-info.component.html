@@ -1,6 +1,84 @@
 <div id="PokemonFullInfo">
+  <div class="back-arrow">
+    <img src="./../../../assets/back_arrow.png" alt='image' class="back-arrow-img" [routerLink]="['/home']">
+  </div>
   <app-loading [hidden]="!isLoading"></app-loading>
-  <div id="PokemonResumeCard" >
-
+  <div class="pokemon-full-card">
+    <div class="pokemon-top-infos">
+      <div class="top-full-image">
+        <img src={{pokemon.images.small}} alt='image'>
+      </div>
+      <div class="pokemon-top-infos-content">
+        <div class="pokemon-full-title">
+          <h1>{{pokemon.name}}</h1>
+        </div>
+        <p><b>ID: </b>{{pokemon.id}}</p>
+        <div class="combo-area">
+          <h3>Tipo(s)</h3>
+          <ul>
+            <li *ngFor="let type of pokemon.types">{{type}}</li>
+          </ul>
+        </div>
+        <div class="combo-area">
+          <h3>Resistencia(s)</h3>
+          <table class="combo-tables">
+            <tr>
+              <th>Tipo</th>
+              <th>Valor</th>
+            </tr>
+            <tr *ngFor="let resistance of pokemon.resistances">
+              <td>{{resistance.type}}</td>
+              <td>{{resistance.value}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="combo-area">
+          <h3>Fraqueza(s)</h3>
+          <table class="combo-tables">
+            <tr>
+              <th>Tipo</th>
+              <th>Valor</th>
+            </tr>
+            <tr *ngFor="let weakness of pokemon.weaknesses">
+              <td>{{weakness.type}}</td>
+              <td>{{weakness.value}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="pokemon-bottom-infos">
+      <div class="combo-area attack">
+        <h3>Ataques</h3>
+        <table class="combo-tables">
+          <tr>
+            <th>Nome</th>
+            <th>Dano</th>
+            <th>Custo de Mana</th>
+            <th>Descrição</th>
+          </tr>
+          <tr *ngFor="let attack of pokemon.attacks">
+            <td >{{attack.name}}</td>
+            <td>{{attack.damage ? attack.damage : 'N/A'}}</td>
+            <td >{{attack.cost}}</td>
+            <td class="small-text-table">{{attack.text}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="combo-area mobile">
+        <h3>Ataques</h3>
+        <div *ngFor="let attack of pokemon.attacks" class="mobile-attack">
+          <div class="mobile-attack-title">
+            <h4>{{attack.name}}</h4>
+          </div>
+          <p><b>Dano: </b>{{attack.damage ? attack.damage : 'N/A'}}</p>
+          <p><b>Custo: </b>{{attack.cost}}</p>
+          <p><b>Descrição: </b>{{attack.text}}</p>
+        </div>
+      </div>
+    <div class="bottom-full-image">
+      <img src={{pokemon.images.small}} alt='image'>
+    </div>
   </div>
 </div>
+

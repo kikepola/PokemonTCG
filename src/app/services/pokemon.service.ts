@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Pokemon, Pokedex } from '../models/pokemon.model';
+import { Pokedex, SinglePokedex } from '../models/pokemon.model';
 import {environment} from '../../environments/environment';
 
 @Injectable({
@@ -18,8 +18,8 @@ export class PokemonService {
     return this.http.get<Pokedex>(this.baseUrl + 'cards', { headers: new HttpHeaders().set("X-Api-Key", environment.apiKey)})
   }
 
-  getCardById(id:string):Observable<Pokemon>{
-    return this.http.get<Pokemon>(this.baseUrl + 'cards/' +  id, { headers: new HttpHeaders().set("X-Api-Key", environment.apiKey)})
+  getCardById(id:string):Observable<SinglePokedex>{
+    return this.http.get<SinglePokedex>(this.baseUrl + 'cards/' +  id, { headers: new HttpHeaders().set("X-Api-Key", environment.apiKey)})
   }
 
 }
